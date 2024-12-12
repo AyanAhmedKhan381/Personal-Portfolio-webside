@@ -1,0 +1,79 @@
+/* skills.css */
+
+/* Section styles */
+.skills-section {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    background-color: #0f0715;
+  }
+  
+  /* Skills grid styles */
+  .skills-grid {
+    padding-top: 5rem;
+    width: 80%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1rem;
+    align-items: center;
+  }
+  
+  @media (min-width: 640px) {
+    .skills-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (min-width: 768px) {
+    .skills-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .skills-grid {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+  
+  @media (min-width: 1280px) {
+    .skills-grid {
+      grid-template-columns: repeat(5, 1fr);
+    }
+  }
+  
+  /* Individual skill card styles */
+  .skill-card {
+    padding: 1.5rem;
+    text-align: center;
+    border-radius: 0.5rem;
+    background-color: #1a1a1a; /* Equivalent to Tailwind's bg-gray-900 */
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .skill-card:hover {
+    background-color: #1e3a8a; /* Equivalent to Tailwind's bg-blue-900 */
+  }
+  
+  .skill-image {
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
+  }
+  
+  .skill-title {
+    font-size: 1.125rem; /* 18px */
+    margin-top: 1rem;
+    color: #ffffff;
+    font-weight: 600;
+  }
+  
+  .skill-percent {
+    background-color: #000000;
+    margin-top: 1rem;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    color: rgba(255, 255, 255, 0.4); /* Opacity equivalent to Tailwind's opacity-40 */
+  }
+  

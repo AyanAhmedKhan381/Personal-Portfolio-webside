@@ -1,30 +1,25 @@
-"use client"
-import Image from 'next/image';
-import React from 'react'
-import Tilt from "react-parallax-tilt"
+"use client";
+import Image from "next/image";
+import React from "react";
+import Tilt from "react-parallax-tilt";
 
-
-// defin the props type 
 interface Props {
-   service: {
+  service: {
     id: number;
     title: string;
     discription: string;
     icon: string;
-    }
+  };
 }
 
+const ServiceCart = ({ service }: Props) => {
+  return (
+    <Tilt className="service-card">
+      <Image src={service.icon} alt={service.title} width={50} height={50} />
+      <h1>{service.title}</h1>
+      <p>{service.discription}</p>
+    </Tilt>
+  );
+};
 
-
-const ServiceCart = ({service}:Props) => {
-
-  return <Tilt 
-        className='shadow-2xl p-6 rounded-lg bg-[#814ced]'>
-        <Image src={service.icon} alt={service.title} width={50} height={50}/>
-        <h1 className='mt-4 text-lg font-bold text-gray-100 '>{service.title}</h1>
-        <p className='mt-3 text-sm text-white text-opacity-80'>{service.discription}</p>
-
-  </Tilt>
-}
-
-export default ServiceCart
+export default ServiceCart;

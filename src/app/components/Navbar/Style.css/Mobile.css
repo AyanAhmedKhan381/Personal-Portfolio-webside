@@ -1,0 +1,85 @@
+/* General Utility Classes */
+.fixed {
+  position: fixed;
+}
+.inset-0 {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.z-1000 {
+  z-index: 1000;
+}
+.z-10000 {
+  z-index: 10000;
+}
+.opacity-70 {
+  opacity: 0.7;
+}
+.transition-transform {
+  transition: transform 0.5s ease-in-out;
+}
+
+/* Overlay Styles */
+.overlay {
+  background-color: black;
+  width: 100%;
+  height: 100vh;
+}
+
+/* Nav Container Styles */
+.nav-container {
+  color: white;
+  position: fixed;
+  height: 100%;
+  max-width: 80%; /* Limit max width for small screens */
+  background-color: #0f0715;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.5rem;
+  transform: translateX(-100%);
+}
+.nav-container-open {
+  transform: translateX(0);
+}
+
+/* Responsive Styles */
+@media (min-width: 640px) {
+  .nav-container {
+    max-width: 60%; /* Adjust width for screens >= 640px */
+  }
+}
+
+@media (min-width: 1024px) {
+  .nav-container {
+    max-width: 40%; /* Narrower width for large screens */
+  }
+}
+
+/* Nav Links */
+.nav-link {
+  font-size: 20px;
+  margin-left: 3rem;
+  border-bottom: 1.5px solid white;
+  padding-bottom: 0.5rem;
+}
+.nav-link-responsive {
+  font-size: 30px;
+}
+
+/* Close Button */
+.close-button {
+  position: absolute;
+  top: 0.7rem;
+  right: 1.4rem;
+  color: white;
+  cursor: pointer;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+.close-button-responsive {
+  width: 2rem;
+  height: 2rem;
+}

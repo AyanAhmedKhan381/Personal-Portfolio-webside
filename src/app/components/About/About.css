@@ -1,0 +1,225 @@
+/* General Styles */
+.about-section {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  background-color: #050709;
+  box-sizing: border-box; /* Prevents unexpected width issues */
+}
+
+.section-heading {
+  text-align: center;
+  font-size: 2rem;
+  color: #fff;
+  font-weight: bold;
+}
+
+/* Main Container */
+.main-container {
+  width: 100%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  align-items: center;
+  margin-top: 5rem;
+}
+
+.main-container-lg {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+/* Text Content */
+.text-content h1 {
+  font-size: 1.625rem;
+  font-weight: bold;
+  color: #d1d5db;
+}
+
+.text-content h1.lg {
+  font-size: 3rem;
+}
+
+.text-content p {
+  margin-top: 1.5rem;
+  font-size: 1rem;
+  color: #9ca3af;
+}
+
+/* Stats Container */
+.stats-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 4rem;
+  align-items: center;
+  margin: 0 auto;
+}
+
+/* Stats Item */
+.stats-item {
+  text-align: center;
+}
+
+.stats-item img {
+  display: block;
+  margin: 0 auto;
+}
+
+.stats-item .title {
+  margin-top: 0.75rem;
+  font-weight: bold;
+  font-size: 1.25rem;
+  color: #fff;
+}
+
+.stats-item .subtitle {
+  font-size: 1rem;
+  color: #9ca3af;
+}
+
+/* Utility Classes */
+.mx-auto {
+  margin: 0 auto;
+}
+
+.mt-3 {
+  margin-top: 0.75rem;
+}
+
+.mt-6 {
+  margin-top: 1.5rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.font-bold {
+  font-weight: bold;
+}
+
+.text-white {
+  color: #ffffff;
+}
+
+.text-gray {
+  color: #9ca3af;
+}
+
+.text-xl {
+  font-size: 1.25rem;
+}
+
+.text-lg {
+  font-size: 1rem;
+}
+
+/* Mobile Adjustments */
+@media (max-width: 767px) {
+  /* Adjust text sizes for smaller screens */
+  .section-heading {
+      font-size: 1.5rem;
+  }
+
+  .text-content h1 {
+      font-size: 1.25rem;
+  }
+
+  .text-content h1.lg {
+      font-size: 2rem;
+  }
+
+  .text-content p {
+      font-size: 0.875rem;
+  }
+
+  .stats-container {
+      grid-template-columns: 1fr; /* Stack stats vertically on small screens */
+      gap: 2rem;
+  }
+
+  .stats-item .title {
+      font-size: 1rem;
+  }
+
+  .stats-item .subtitle {
+      font-size: 0.875rem;
+  }
+
+  .main-container {
+      width: 90%;
+  }
+}
+
+/* Medium Screens (768px to 1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+  /* Adjust text sizes for medium screens */
+  .section-heading {
+      font-size: 1.75rem;
+  }
+
+  .text-content h1 {
+      font-size: 1.5rem;
+  }
+
+  .text-content h1.lg {
+      font-size: 2.5rem;
+  }
+
+  .text-content p {
+      font-size: 0.9rem;
+  }
+
+  .stats-container {
+      grid-template-columns: repeat(2, 1fr); /* Two columns for medium screens */
+      gap: 3rem;
+  }
+
+  .stats-item .title {
+      font-size: 1.125rem;
+  }
+
+  .stats-item .subtitle {
+      font-size: 0.9rem;
+  }
+
+  .main-container {
+      width: 85%;
+  }
+}
+
+/* Large Screens (1024px and above) */
+@media (min-width: 1024px) {
+  /* Default styles for larger screens */
+  .section-heading {
+      font-size: 2rem;
+  }
+
+  .text-content h1 {
+      font-size: 1.625rem;
+  }
+
+  .text-content h1.lg {
+      font-size: 3rem;
+  }
+
+  .text-content p {
+      font-size: 1rem;
+  }
+
+  .stats-container {
+      grid-template-columns: repeat(2, 1fr); /* Two columns for large screens */
+      gap: 4rem;
+  }
+
+  .stats-item .title {
+      font-size: 1.25rem;
+  }
+
+  .stats-item .subtitle {
+      font-size: 1rem;
+  }
+
+  .main-container {
+      width: 60%;
+  }
+}

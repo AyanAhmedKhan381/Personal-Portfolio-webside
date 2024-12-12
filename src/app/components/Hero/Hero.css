@@ -1,0 +1,165 @@
+/* Hero Section */
+.hero {
+  width: 100%;
+  padding-top: 20vh;
+  min-height: 100vh; /* Ensure full viewport height */
+  background-color: #0f0715;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Container for centralizing content */
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  height: 100%;
+  margin: 0 auto;
+}
+
+/* Grid Section */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr; /* Default to 1 column */
+  gap: 12px;
+  align-items: center;
+}
+
+/* Grid for larger screens (2 columns) */
+.grid-lg {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+/* Text Styling */
+.text-content h1:first-of-type {
+  font-size: 2rem;
+  margin-bottom: 1.25rem;
+  color: #b3b3b3;
+  font-weight: 600;
+}
+
+.text-content h1:last-of-type {
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 3.5rem;
+  color: #fff;
+}
+
+.text-content p {
+  margin-top: 1.5rem;
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* Button Styling */
+.button {
+  padding: 0.75rem 1.5rem;
+  margin-top: 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
+  background-color: #2563eb;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.button:hover {
+  background-color: #1d4ed8;
+}
+
+/* Image Section */
+.image-content {
+  margin: 0 auto;
+  display: block; /* Ensure images are displayed */
+}
+
+.image-content-lg {
+  display: block;
+  border: 3.5px solid #1e3a8a;
+  border-radius: 3rem;
+}
+
+/* Mobile Adjustments */
+
+/* For small screens (up to 767px) */
+@media (max-width: 767px) {
+  /* Make text smaller */
+  .text-content h1:first-of-type {
+    font-size: 1.5rem;
+  }
+
+  .text-content h1:last-of-type {
+    font-size: 2rem;
+    line-height: 2.5rem;
+  }
+
+  .text-content p {
+    font-size: 0.75rem;
+  }
+
+  .button {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
+  }
+
+  /* Stack the grid content vertically (1 column) */
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .grid-lg {
+    grid-template-columns: 1fr; /* Single column layout for mobile */
+  }
+}
+
+/* For medium screens (768px to 1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .text-content h1:first-of-type {
+    font-size: 1.75rem;
+  }
+
+  .text-content h1:last-of-type {
+    font-size: 2.5rem;
+  }
+
+  .text-content p {
+    font-size: 0.8rem;
+  }
+
+  .button {
+    padding: 0.7rem 1.4rem;
+    font-size: 0.95rem;
+  }
+
+  .grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns on medium screens */
+  }
+}
+
+/* For large screens (1024px and above) */
+@media (min-width: 1024px) {
+  .text-content h1:first-of-type {
+    font-size: 2rem;
+  }
+
+  .text-content h1:last-of-type {
+    font-size: 3rem;
+  }
+
+  .text-content p {
+    font-size: 0.875rem;
+  }
+
+  .button {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+  }
+
+  .grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+  }
+}

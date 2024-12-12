@@ -1,31 +1,26 @@
 import React from "react";
 import SectionHeading from "../../components/Helper/SectionHeading";
 import { aboutInfo } from "@/app/Data/data";
-import { FaCheck } from "react-icons/fa";
 import CheckMark from "../../components/Helper/CheckMark";
 import Image from "next/image";
+import "./about.css"; // Assuming you create a CSS file for these styles
 
 const About = () => {
   return (
-    <div className="pt-16 pb-16 bg-[#050709]">
-      <div className="mt-24"><SectionHeading>About Me</SectionHeading></div>
+    <div className="about-container">
+      <div className="section-heading">
+        <SectionHeading>About Me</SectionHeading>
+      </div>
 
       {/* main div Right and Left Content */}
-      <div className="w-[80%] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 items-center mt-20">
-        {/* Text Cointent */}
-        <div data-aos="fade-left" data-aos-anchor-placement="top-center">
+      <div className="about-content">
+        {/* Text Content */}
+        <div className="about-text" data-aos="fade-left" data-aos-anchor-placement="top-center">
           {/* subTitle */}
-          <h1
-            className="text-bg text-[26px] sm:text-3xl md:text-4xl lg:text-5xl font-bold
-           text-gray-200"
-          >
-            {aboutInfo.title}
-          </h1>
+          <h1 className="about-title text-bg">{aboutInfo.title}</h1>
 
           {/* description */}
-          <p className="mt-6 text-base text-gray-500">
-            {aboutInfo.discription}
-          </p>
+          <p className="about-description">{aboutInfo.discription}</p>
 
           <CheckMark text={"Frontend Development"} Bg_Blue={true} />
           <CheckMark text={"Backend Development"} Bg_Orange={true} />
@@ -33,77 +28,33 @@ const About = () => {
         </div>
 
         {/* stats Content */}
-        <div className="grid grid-cols-2 gap-16 items-center lg:mx-auto "
-          data-aos="zoom-in"
-          data-aos-anchor-placement="top-center"
-          data-aos-delay="150">
-            
+        <div className="about-stats" data-aos="zoom-in" data-aos-anchor-placement="top-center" data-aos-delay="150">
           {/* 1 stats */}
-          <div>
-            <Image
-              src={"/images2/customer.png"}
-              alt={"image"}
-              height={80}
-              width={80}
-              className="mx-auto"
-            />
-            <p className="mt-3 font-bold text-xl text-white text-center">
-              {aboutInfo.client}
-            </p>
-            <p className="text-base sm:text-lg text-gray-400 text-center">
-              Satisfied Customers
-            </p>
+          <div className="stat-item">
+            <Image src={"/images2/customer.png"} alt={"image"} height={80} width={80} className="stat-image" />
+            <p className="stat-number">{aboutInfo.client}</p>
+            <p className="stat-description">Satisfied Customers</p>
           </div>
 
           {/* 2 stats */}
-          <div>
-            <Image
-              src={"/images2/experience.png"}
-              alt={"image"}
-              height={80}
-              width={80}
-              className="mx-auto"
-            />
-            <p className="mt-3 font-bold text-xl text-white text-center">
-              {aboutInfo.experience}
-            </p>
-            <p className="text-base sm:text-lg text-gray-400 text-center">
-              Years Experience
-            </p>
+          <div className="stat-item">
+            <Image src={"/images2/experience.png"} alt={"image"} height={80} width={80} className="stat-image" />
+            <p className="stat-number">{aboutInfo.experience}</p>
+            <p className="stat-description">Years Experience</p>
           </div>
 
           {/* 3 stats */}
-          <div>
-            <Image
-              src={"/images2/completed.png"}
-              alt={"image"}
-              height={80}
-              width={80}
-              className="mx-auto"
-            />
-            <p className="mt-3 font-bold text-xl text-white text-center">
-              {aboutInfo.project}
-            </p>
-            <p className="text-base sm:text-lg text-gray-400 text-center">
-              Completed Projects
-            </p>
+          <div className="stat-item">
+            <Image src={"/images2/completed.png"} alt={"image"} height={80} width={80} className="stat-image" />
+            <p className="stat-number">{aboutInfo.project}</p>
+            <p className="stat-description">Completed Projects</p>
           </div>
 
           {/* 4 stats */}
-          <div>
-            <Image
-              src={"/images2/rocket.png"}
-              alt={"image"}
-              height={80}
-              width={80}
-              className="mx-auto"
-            />
-            <p className="mt-3 font-bold text-xl text-white text-center">
-              {aboutInfo.client}
-            </p>
-            <p className="text-base sm:text-lg text-gray-400 text-center">
-              Webside launched
-            </p>
+          <div className="stat-item">
+            <Image src={"/images2/rocket.png"} alt={"image"} height={80} width={80} className="stat-image" />
+            <p className="stat-number">{aboutInfo.client}</p>
+            <p className="stat-description">Website launched</p>
           </div>
         </div>
       </div>

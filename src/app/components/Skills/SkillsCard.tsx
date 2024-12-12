@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React from "react";
+import "./style.css/Skills.css"; // Import custom CSS
 
-// defint props type
 interface Props {
   skill: {
     id: number;
@@ -15,18 +15,16 @@ const SkillsCard = ({ skill }: Props) => {
   const { image, percent, title } = skill;
 
   return (
-    <div className="p-6 hover:bg-blue-900 duration-300 transition-all cursor-pointer text-center rounded-lg bg-gray-900">
+    <div className="skill-card">
       <Image
         src={image}
         alt={title}
         height={80}
         width={80}
-        className="object-cover mx-auto"
+        className="skill-image"
       />
-      <h1 className="text-[18px] mt-4 text-white font-[600] ">
-        {title}
-      </h1>
-      <p className="bg-black mt-4 rounded-lg p-2 text-white opacity-40">{percent}</p>
+      <h1 className="skill-title">{title}</h1>
+      <p className="skill-percent">{percent}</p>
     </div>
   );
 };

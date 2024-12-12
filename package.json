@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "aos": "^3.0.0-beta.6",
-    "next": "14.2.13",
+    "next": "14.2.2",
     "react": "^18",
     "react-animated-cursor": "^2.11.2",
     "react-dom": "^18",

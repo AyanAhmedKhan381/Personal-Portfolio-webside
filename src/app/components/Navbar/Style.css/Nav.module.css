@@ -1,0 +1,116 @@
+/* Navbar container styles */
+.navbar {
+  position: fixed;
+  width: 100%; /* Full width */
+  max-height: 12vh; /* Limit navbar height */
+  z-index: 10;
+  transition: all 0.3s ease;
+}
+
+.navbarBgLight {
+  background-color: #240b39;
+}
+
+.navbarBgDark {
+  background-color: #0f0715;
+}
+
+/* Navbar inner container */
+.navbarContainer {
+  display: flex;
+  align-items: center; /* Center items vertically */
+  justify-content: space-between; /* Space between logo and nav links */
+  color: white;
+  width: 100%; /* Full width */
+  max-width: 1200px; /* Limit width for larger screens */
+  margin: 0 auto; /* Center container horizontally */
+  padding: 0 1rem; /* Add some padding for smaller screens */
+}
+
+/* Responsive adjustments for small and extra-large screens */
+.navbarContainer.sm {
+  width: 100%;
+}
+
+.navbarContainer.xl {
+  width: 100%;
+}
+
+/* Logo styling */
+.logo {
+  margin-left: 0; /* Ensure consistent spacing */
+  width: 6rem; /* Default size */
+}
+
+.logoLg {
+  width: 8rem; /* Larger size for lg screens */
+}
+
+/* Nav links container */
+.navLinksContainer {
+  display: flex; /* Flexbox for alignment */
+  align-items: center; /* Align items vertically */
+  gap: 2.5rem; /* Space between links */
+  flex-wrap: wrap; /* Allow wrapping if needed */
+}
+
+/* Hide nav links on small screens */
+.navLinksContainerLg {
+  display: none;
+}
+
+/* Nav link styles */
+.nav__link {
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.nav__link:hover {
+  color: #ddd; /* Customize hover color */
+}
+
+/* Button styles */
+.button {
+  padding: 0.5rem 2rem;
+  background-color: white;
+  color: #1e40af; /* text-blue-800 */
+  font-weight: 600;
+  font-size: 1rem;
+  border-radius: 0.375rem;
+  transition: background-color 0.2s ease;
+}
+
+.button:hover {
+  background-color: #e5e7eb; /* hover:bg-gray-200 */
+}
+
+/* Mobile menu toggle button */
+.menuToggle {
+  width: 2rem;
+  height: 2rem;
+  cursor: pointer;
+  color: white;
+}
+
+.menuToggle.lg {
+  display: none; /* Hide on large screens */
+}
+
+/* Large screen styles */
+@media (min-width: 1024px) {
+  .navbarContainer {
+    width: 100%; /* Full width */
+    max-width: 1200px; /* Limit the max width */
+  }
+
+  .navLinksContainerLg {
+    display: flex; /* Show nav links on large screens */
+    gap: 2rem; /* Adjust spacing */
+  }
+
+  .menuToggle {
+    display: none; /* Hide toggle button on large screens */
+  }
+}

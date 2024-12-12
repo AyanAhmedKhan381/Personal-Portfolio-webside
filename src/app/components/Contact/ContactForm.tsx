@@ -1,82 +1,71 @@
-/* eslint-disable react/no-unescaped-entities */
-
 import React from "react";
+import "./style.css/Contact.css"
+
+
 
 const ContactForm = () => {
   return (
-    <div className="bg-[#140c1c] rounded-lg p-4 sm:p-10 ">
-      <h1 className="text-bg text-2xl md:text-3xl lg:text-[2.5rem] font-bold">
-        Let’s work together!
-      </h1>
-
-      <p className="text-gray-200 mt-3 lg:text-base text-xs md:text-sm ">
-        Get in touch globally via email, phone, or social media. Available for
-        queries, collaborations, or general assistance. Stay connected with us
-        for updates around the world
+    <div className="bg-form rounded-lg p-4 sm:p-10">
+      <h1 className="text-heading text-special">Let’s work together!</h1>
+      <p className="text-paragraph">
+        Get in touch via email, phone, or social media. Available for queries,
+        collaborations, or assistance.
       </p>
 
-      {/* input filds */}
-      <form className="mt-8 block w-full overflow-hidden ">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-4">
+      <form className="mt-8 w-full">
+        {/* Name Inputs */}
+        <div className="flex-container">
           <input
             type="text"
             placeholder="First Name"
-            className="flex-1 bg-black text-white placeholder:text-gray-600 px-6 py-3 rounded-md border-[1.5px] border-gray-200
-            border-opacity-50 outline-none w-full"
+            className="form-input"
+            required
           />
-
           <input
             type="text"
             placeholder="Last Name"
-            className="flex-1 bg-black text-white placeholder:text-gray-600 px-6 py-3 rounded-md border-[1.5px] border-gray-200
-            border-opacity-50 outline-none w-full"
+            className="form-input"
+            required
           />
         </div>
 
-        <div className="flex flex-col md:flex-row items-center justify-between gap-4">
+        {/* Contact Details */}
+        <div className="flex-container">
           <input
             type="email"
             placeholder="Email Address"
-            className="flex-1 bg-black mt-5 text-white placeholder:text-gray-600 px-6 py-3 rounded-md border-[1.5px]
-             border-gray-200 border-opacity-50 outline-none w-full"
+            className="form-input"
+            required
           />
-
           <input
             type="text"
             placeholder="Phone Number"
-            className="flex-1 bg-black mt-5 text-white placeholder:text-gray-600 px-6 py-3 rounded-md border-[1.5px]
-             border-gray-200 border-opacity-50 outline-none w-full"
+            className="form-input"
           />
         </div>
 
-        <div>
-          <select
-            className="w-full mt-5 bg-black text-white placeholder:text-gray-600 px-4 py-3.5
-           rounded-md border-[1.5px] border-gray-200 border-opacity-15 outline-none"
-          >
-            <option value="" disabled selected>
-              Select an option
-            </option>
+        {/* Dropdown */}
+        <select className="form-input mt-5" required>
+          <option value="" disabled selected>
+            Select an option
+          </option>
+          <option value="Frontend">Frontend Development</option>
+          <option value="Backend">Backend Development</option>
+          <option value="FullStack">Full Stack Development</option>
+        </select>
 
-            <option value="Frontend">Frontend Development </option>
-            <option value="backend">Backend Bevelopment </option>
-            <option value="fullstack">Full Stack Development </option>
-          </select>
-        </div>
-
+        {/* Message */}
         <textarea
           rows={7}
           placeholder="Message"
-          className="w-full mt-5 bg-black text-white placeholder:text-gray-600 px-4 py-3.5
-           rounded-md border-[1.5px] border-gray-200 border-opacity-15 outline-none">
-       </textarea>
+          className="form-input mt-5"
+          required
+        ></textarea>
 
-       <div className="mt-4 ">
-        <button className="px-8 py-3.5 bg-[#7947df] text-white hover:bg-[#5c2fb7] transition-all rounded-full duration-200">
-        Send Message
+        {/* Submit Button */}
+        <button type="submit" className="form-button mt-4">
+          Send Message
         </button>
-       </div>
-
       </form>
     </div>
   );

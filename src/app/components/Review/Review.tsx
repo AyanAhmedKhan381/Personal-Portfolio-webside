@@ -1,21 +1,17 @@
-"use client"
-import SectionHeading from "../Helper/SectionHeading"
+"use client";
+import SectionHeading from "../Helper/SectionHeading";
 import Slider from "./Slider";
-
-
-
+import "./Review.css/Review.css"; // Import custom CSS
 
 const Review = () => {
   return (
-    <div className="pt-16 pb-16 bg-[#050709]">
+    <div className="review-section">
       <SectionHeading>Client Reviews</SectionHeading>
-
-      <div className="w-[90%] sm:w-[80%] mx-auto mt-20 ">
-        <Slider/>
+      <div className="slider-container">
+        <Slider />
       </div>
-
     </div>
-  )
-}
+  );
+};
 
-export default Review
+export default Review;

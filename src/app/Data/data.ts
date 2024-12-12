@@ -107,22 +107,22 @@ export const projectData = [
     },
     
     {
-        id: 5,
+        id: 4,
         image: "/images2/p5.png",
         url: "#"
     },
+    // {
+    //     id: 5,
+    //     image: "/images2/p6.png",
+    //     url: "#"
+    // },
     {
         id: 6,
-        image: "/images2/p6.png",
-        url: "#"
-    },
-    {
-        id: 7,
         image: "/images2/p7.png",
         url: "#"
     },
     {
-        id: 8,
+        id: 7,
         image: "/images2/p8.png",
         url: "#"
     },
